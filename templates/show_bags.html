@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>包包库存数据</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .actions a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .actions a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>包包库存数据</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名称</th>
+                <th>数量</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bag in bags %}
+            <tr>
+                <td>{{ bag.id }}</td>
+                <td>{{ bag.name }}</td>
+                <td>{{ bag.number }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="actions">
+        <a href='/internal_management'>返回管理系统</a>
+        <a href='/Bin'>包包归还</a>
+        <a href='/Bout'>包包下架</a>
+        <a href='/logout'>退出登录</a>
+    </div>
+</body>
+</html>

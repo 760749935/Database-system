@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>内部管理系统</title>
+    <style>
+        .HT {
+            font-family: Arial, sans-serif;
+            font-size: 32px;
+            color: #002afd;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .HT:hover {
+            color: #0018a8;
+            text-decoration: underline;
+        }
+
+        .BT {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 300px 300px;
+            gap: 20px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            border: 4px solid #1e1f22;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .logout {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logout a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logout a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="BT">
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href='/Bin' class="HT">包包归还</a>
+        </div>
+        <div class="grid-item">
+            <a href='/Bout' class="HT">包包下架</a>
+        </div>
+        <div class="grid-item">
+            <a href='/Bshow' class="HT">查看库存</a>
+        </div>
+        <div class="grid-item">
+            <a href='/show' class="HT">查看用户</a>
+        </div>
+        <div class="logout">
+            <a href='/logout'>退出登录</a>
+        </div>
+    </div>
+</body>
+
+</html>

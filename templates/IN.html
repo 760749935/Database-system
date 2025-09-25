@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>包包归还系统</title>
+    <style>
+        .IT {
+            border: 2px solid blue;
+            width: 300px;
+            height: 40px;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .sub {
+            border: 2px solid blue;
+            width: 200px;
+            height: 40px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .BT {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="BT">
+    <div class="form-container">
+        <h1>包包归还系统</h1>
+        <form action="/B_in" method="post">
+            <input class="IT" type="text" id="name" name="name" placeholder="输入包包品牌" required>
+            <br>
+            <input class="IT" type="number" id="number" name="number" placeholder="输入归还数量" min="1" required>
+            <br>
+            <input class="sub" type="submit" value="提交归还">
+        </form>
+        <br>
+        <a href='/Bshow'>查看所有包包</a>
+        <a href='/login'>返回登录系统</a>
+    </div>
+</body>
+</html>
